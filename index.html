@@ -3,46 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day</title>
+    <title>Is it you?</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .responsive-image {
-            max-width: 100%;
-            height: auto;
-        }
-        #message-screen p.lead {
-            text-align: center; /* Center the text */
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <div id="photo-screen" class="text-center">
-            <!-- <h1>Valentine's Day</h1> -->
-            <img id="main-photo" src="assets/us3.png" alt="Our Photo" class="img-fluid clickable responsive-image">
-        </div>
+    <div id="question-screen" class="question-container">
+        <h1>Are you my girl?</h1>
+        <button id="yes-button" class="btn btn-primary btn-lg mt-3">Yes</button>
+    </div>
 
-        <div id="message-screen" class="text-center" style="display: none; margin-top: 25%;">
-            <p class="lead">Someone wants to send you a letter!</p>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-                <button id="read-button" class="btn btn-primary btn-lg" style="min-width: 150px; height: 50px; display: flex; justify-content: center; align-items: center; margin-top: 15px; ">Read Me</button>
-                <button id="back-to-photo" class="btn btn-secondary mt-3" style="min-width: 150px; height: 50px; display: flex; justify-content: center; align-items: center;">Go Back</button>
+    <div id="magic-word-screen" class="question-container" style="display: none;">
+        <h2>What's the magic word?</h2>
+        <form id="magic-word-form">
+            <div class="form-group">
+                <input type="password" class="form-control form-control-lg" id="magic-word" placeholder="Enter the magic word">
             </div>
+            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+        </form>
+        <div id="error-message" style="display: none;">
+            <p class="mt-2">Oops! You can't access this page.</p>
+            <button id="try-again" class="btn btn-secondary mt-2">Try Again</button>
         </div>
+    </div>
 
-        <div id="letter-screen" style="display: none;">
-            <!-- <h1>Letter</h1> -->
-            <button id="back-to-message" class="btn btn-secondary mb-3" style="margin-top: 5%;" >Go Back</button>
-            <div class="letter-content border rounded p-4 bg-white" style="margin-top: 3%;">
-                <p class="text-center">To the most precious girl I have ever met,</p>
-                <p class="text-center">I may not be the most perfect someone in your life, but I promise to be better than I was before.</p>
-                <p class="text-center">A mistake took a negative turn in our relationship but I'll make up for it and I will make things right this time.</p>
-                <p class="text-center">Happy Valentine's Day, my Valentine! I love you.</p>
+    <div id="valentine-page" style="display: none;">
+        <div class="container">
+            <div id="photo-screen" class="text-center">
+                <img id="main-photo" src="assets/us3.png" alt="Our Photo" class="img-fluid clickable responsive-image">
             </div>
-            <div class="mt-3 text-center">
-                <a href="./pdf/HVD.pdf" target="_blank"><button id="open-story" class="btn btn-info">Story of us</button></a>
-                <a href="./pdf/POEMS.pdf" target="_blank"><button id="open-poems" class="btn btn-info ml-2">Poems for you (ps. it's not done yet)</button></a>
+
+            <div id="message-screen" class="text-center" style="display: none; margin-top: 25%;">
+                <p class="lead">Someone wants to send you a letter!</p>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+                    <button id="read-button" class="btn btn-primary btn-lg" style="min-width: 150px; height: 50px; display: flex; justify-content: center; align-items: center; margin-top: 15px; ">Read Me</button>
+                    <button id="back-to-photo" class="btn btn-secondary mt-3" style="min-width: 150px; height: 50px; display: flex; justify-content: center; align-items: center;">Go Back</button>
+                </div>
+            </div>
+
+            <div id="letter-screen" style="display: none;">
+                <button id="back-to-message" class="btn btn-secondary mb-3" style="margin-top: 5%;" >Go Back</button>
+                <div class="letter-content border rounded p-4 bg-white" style="margin-top: 3%;">
+                    <p class="text-center">To the most precious girl I have ever met,</p>
+                    <p class="text-center">I may not be the most perfect someone in your life, but I promise to be better than I was before.</p>
+                    <p class="text-center">A mistake took a negative turn in our relationship but I'll make up for it and I will make things right this time.</p>
+                    <p class="text-center">Happy Valentine's Day, my Valentine! I love you.</p>
+                </div>
+                <div class="mt-3 text-center">
+                    <a href="./pdf/HVD.pdf" target="_blank"><button id="open-story" class="btn btn-info">Story of us</button></a>
+                    <a href="./pdf/POEMS.pdf" target="_blank"><button id="open-poems" class="btn btn-info ml-2">Poems for you (ps. it's not done yet)</button></a>
+                </div>
             </div>
         </div>
     </div>
