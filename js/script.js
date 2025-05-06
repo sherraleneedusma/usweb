@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (enteredWord === correctMagicWord) {
                 magicWordScreen.style.display = 'none';
                 valentinePage.style.display = 'block';
+                document.title = "ily"; // Change the title here
             } else {
                 errorMessage.style.display = 'block';
             }
