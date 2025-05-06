@@ -2,6 +2,10 @@ body {
     font-family: sans-serif;
     background-color: #ffffff;
     padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .clickable {
@@ -10,4 +14,29 @@ body {
 
 .letter-content {
     white-space: pre-line; /* Preserve line breaks from the text */
+}
+
+.question-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#magic-word-form, #error-message {
+    margin-top: 20px;
+}
+
+#error-message {
+    color: red;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#message-screen p.lead {
+    text-align: center; /* Center the text */
 }
