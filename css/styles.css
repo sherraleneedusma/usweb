@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    padding-top: 50px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.letter-content {
+    white-space: pre-line; /* Preserve line breaks from the text */
+}
